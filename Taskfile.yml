@@ -1,0 +1,24 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  convert:
+    cmds:
+      - mkdir -p '{{.DIR}}'
+      - jinja2 --strict '{{.ITEM}}' variables.yml | pandoc -o {{.ITEM | replace ".md.j2" ".html" | replace "src/" "out/"}}
+    vars:
+      DIR: '{{.ITEM | replace "src/" "out/"  | dir}}'
+
+  default:
+    cmds:
+      - for: { var: J2_FILES }
+        task: convert
+        vars:
+          ITEM: "{{.ITEM}}"
+    vars:
+      J2_FILES:
+        sh: find src -name '*.md.j2'
