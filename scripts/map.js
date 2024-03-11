@@ -27,7 +27,7 @@ $(window).bind("load", function () {
     style: new ol.style.Style({
       image: new ol.style.Icon({
         anchor: [0.5, 1],
-        src: "../resources/marker.png",
+        src: "https://cdn.jsdelivr.net/gh/dawidsowa/leo-pwr/resources/marker.png",
       }),
     }),
   });
