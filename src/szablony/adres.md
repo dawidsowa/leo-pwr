@@ -1,7 +1,2 @@
-**Laboratorium Energetyki Odnawialnej**\
-Politechnika Wrocławska\
-Wydział Mechaniczno-Energetyczny\
-Budynek L-1,\
-Na Grobli 13\
-50-421 Wrocław
+
 <!-- TODO: Czy to jest prawidłowy kod pocztowy -->
